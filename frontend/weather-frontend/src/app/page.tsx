@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import SearchBox from "../components/SearchBox";
 import WeatherDetails from "../components/WeatherDetails";

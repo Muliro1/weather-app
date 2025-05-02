@@ -6,12 +6,14 @@ interface SearchBoxProps {
 
 const SearchBox = ({ onSearch }: SearchBoxProps) => {
   const [city, setCity] = useState("");
+  const [country, setCountry] = useState("");
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (city) {
+    if (city && country) {
       onSearch(city);
       setCity("");
+      setCountry("");
     }
   };
 
