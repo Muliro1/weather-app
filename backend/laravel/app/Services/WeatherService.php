@@ -1,10 +1,10 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
 
-class OpenWeatherService
+class WeatherService
 {
     public function getLocation($city, $state = null, $country = null, $limit = 1)
     {

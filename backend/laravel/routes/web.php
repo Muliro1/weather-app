@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\Controller;
+use App\Http\Controllers\WeatherController;
 
 /*
 |--------------------------------------------------------------------------

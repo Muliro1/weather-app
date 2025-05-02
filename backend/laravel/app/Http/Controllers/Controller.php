@@ -1,21 +1,12 @@
 <?php
 
-namespace app\Http\Controllers;
+namespace App\Http\Controllers;
 
-use app\Services\WeatherService;
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
-class WeatherController extends Controller
+class Controller extends BaseController
 {
-    public function getLocation(Request $request, OpenWeatherService $weather)
-    {
-        $city = $request->input('city');
-        $state = $request->input('state');
-        $country = $request->input('country');
-        $limit = $request->input('limit', 1);
-
-        $result = $weather->getLocation($city, $state, $country, $limit);
-
-        return response()->json($result);
-    }
+    use AuthorizesRequests, ValidatesRequests;
 }
