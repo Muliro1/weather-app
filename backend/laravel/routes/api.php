@@ -16,3 +16,4 @@ use App\Http\Controllers\WeatherController;
 */
 
 Route::get('/weather/location', [WeatherController::class, 'getLocation']);
+Route::get('/weather/full', [WeatherController::class, 'getWeather']);

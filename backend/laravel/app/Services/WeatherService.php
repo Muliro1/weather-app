@@ -20,4 +20,16 @@ class WeatherService
 
         return $response->json();
     }
+
+    public function getWeatherByCoordinates($lat, $lon, $exclude = 'hourly,daily')
+{
+    $response = Http::get('https://api.openweathermap.org/data/3.0/onecall', [
+        'lat' => $lat,
+        'lon' => $lon,
+        'exclude' => $exclude,
+        'appid' => config('services.openweather.key'),
+    ]);
+
+    return $response->json();
+}
 }
